@@ -7,10 +7,19 @@
 
 /* —— body + fonts —— */
 body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  color: #333;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: #000;
   display: flex;
   justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
 }
 
 .page-wrapper {
@@ -37,13 +46,14 @@ body {
 
 .chat-window {
   height: 360px;
-  border: 1px solid #000;
+  border: 3px solid #e3a535;
   padding: 20px;
   font-size: 18px;
   line-height: 1.5;
   overflow-y: auto;
-  background: #fafafa;
+  background: #ff003b;
   white-space: pre-line;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 /* messages */
@@ -57,7 +67,7 @@ body {
 }
 
 .msg.ai {
-  color: #666666;
+  color: #000;
 }
 
 /* input row */
@@ -70,20 +80,27 @@ body {
 .chat-form input {
   flex: 1;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 3px solid #e3a535;
   font-size: 18px;
+  background: #ff003b;
+  color: #000;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+.chat-form input::placeholder {
+  color: #000;
 }
 
 .chat-form input:focus {
-  outline: 2px solid #000;
+  outline: 2px solid #e3a535;
   outline-offset: 2px;
 }
 
 .chat-form button {
   font-size: 18px;
-  background: #000;
-  color: #fff;
-  border: none;
+  background: #e3a535;
+  color: #ffffff;
+  border: solid 3px #e3a535;
   padding: 12px;
   width: 48px;
   height: 48px;
@@ -99,7 +116,7 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: #ff003b;
 }
 
 .chat-form button:focus {
@@ -125,7 +142,7 @@ body {
   margin: 60px 0 40px;
   text-align: center;
   font-size: 14px;
-  color: #666;
+  color: #000;
 }
 
 .site-footer nav {
@@ -139,5 +156,9 @@ body {
 }
 
 .site-footer a:hover {
-  color: #666666;
+  color: #e3a535;
+}
+img {
+  width: 25%;
+  height: 50px;
 }
