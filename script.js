@@ -23,6 +23,7 @@ function addMessage(role, text) {
   message.textContent = text;
   chatWindow.appendChild(message);
 }
+
 chatForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
