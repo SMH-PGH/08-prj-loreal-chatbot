@@ -10,14 +10,16 @@ export default {
     // Handle CORS preflight
     if (request.method === "OPTIONS") {
       return new Response(null, {
-        headers: corsHeaders
-      });
-    }
+      status: 204,
+      headers: corsHeaders
+   });
 
     // Handle OpenAI request
     if (request.method === "POST") {
       const { messages } = await request.json();
-
+      return new Response("Worker is running", {
+  headers: corsHeaders
+});
       const response = await fetch(
         "https://api.openai.com/v1/chat/completions",
         {
