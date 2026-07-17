@@ -41,6 +41,7 @@ chatForm.addEventListener("submit", async (event) => {
   chatWindow.appendChild(loadingMessage);
 
   try {
+    console.log("Sending request to:", workerUrl);
     const response = await fetch(workerUrl, {
       method: "POST",
       headers: {
