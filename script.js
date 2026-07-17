@@ -15,7 +15,7 @@ const messages = [
 ];
 
 // Replace this with the real Cloudflare Worker URL for the class project.
-const workerUrl = "https://teenyweeniedog.sophart.workers.dev/api";"
+const workerUrl = "https://teenyweeniedog.sophart.workers.dev/api";
 
 function addMessage(role, text) {
   const message = document.createElement("p");
