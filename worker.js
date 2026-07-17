@@ -44,9 +44,7 @@ export default {
       });
     }
 
-    return new Response("Not Found", {
-      status: 404,
-      headers: corsHeaders
-    });
-  }
-};
+   return new Response("WORKER IS LIVE", {
+  status: 200,
+  headers: corsHeaders
+});
