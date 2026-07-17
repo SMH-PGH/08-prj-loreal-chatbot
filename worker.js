@@ -48,3 +48,5 @@ export default {
   status: 200,
   headers: corsHeaders
 });
+  }
+  };
