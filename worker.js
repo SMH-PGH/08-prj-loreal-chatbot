@@ -1,13 +1,14 @@
 export default {
   async fetch(request, env) {
 
+    const url = new URL(request.url);
+
     const corsHeaders = {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
     };
 
-    // Handle CORS preflight
     if (request.method === "OPTIONS") {
       return new Response(null, {
         status: 204,
@@ -15,7 +16,6 @@ export default {
       });
     }
 
-    // Handle OpenAI request
     if (request.method === "POST") {
       const { messages } = await request.json();
 
@@ -44,9 +44,6 @@ export default {
       });
     }
 
-   return new Response("WORKER IS LIVE", {
-  status: 200,
-  headers: corsHeaders
-});
+    return env.ASSETS.fetch(request);
   }
-  };
+};
