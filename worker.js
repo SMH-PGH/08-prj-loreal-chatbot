@@ -1,6 +1,5 @@
 export default {
   async fetch(request, env) {
-
     const url = new URL(request.url);
 
     const corsHeaders = {
@@ -16,7 +15,7 @@ export default {
       });
     }
 
-    if (request.method === "POST") {
+   if (url.pathname === "/api" && request.method === "POST") {
       const { messages } = await request.json();
 
       const response = await fetch(
